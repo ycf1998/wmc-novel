@@ -1,0 +1,25 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "/wmc-novel/welcome"
+  },
+  "logoInfo": {
+    "title": "后台管理系统",
+    "image": "/wmc-novel/static/images/logo1.png"
+  },
+  "menuInfo": [
+	{
+      "title": "常规管理",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "人员管理",
+          "href": "/wmc-novel/ums/index",
+          "icon": "fa fa-group",
+          "target": "_self"
+        }
+      ]
+     }
+  ]
+}

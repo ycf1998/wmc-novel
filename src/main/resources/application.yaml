@@ -1,0 +1,38 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /wmc-novel
+spring:
+  profiles:
+    active: dev # 默认开发环境
+  # 时间格式处理
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10240MB
+      max-request-size: 1024MB
+  # 模板引擎freemarker
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+
+# mybatis
+mybatis:
+  mapper-locations: # mapper.xml包地址
+    - classpath:mapper/*.xml
+    - classpath*:mapper/**/*.xml
+# pageHelper分页插件
+pagehelper:
+  helperDialect: mysql # 数据库的方言
+  reasonable: true  # 启用合理化，如果pageNum < 1会查询第一页，如果pageNum > pages会查询最后一页
